@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reparación de calzado Benito - Página Web</title>
+  <meta name="description" content="Reparación de calzado Benito, Autonomía Kalea 9, 48012 Bilbao">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  
+  <!-- Fonts opcionales - quitar si se quiere carga más rápida -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:title" content="Reparación de calzado Benito">
+  <meta property="og:description" content="Reparación de calzado">
+  <meta property="og:type" content="local.business">
+  <meta property="og:url" content="https://reparacioncalzadobenito.com">
+  <meta property="og:image" content="img/og-image.jpg">
+  
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+"name": "Reparación de calzado Benito",
+    "image": "img/logo.png",
+    "@id": "https://reparacioncalzadobenito.com#organization",
+    "telephone": "+34 641 78 87 22",
+    "email": "[FALTA]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Autonomía Kalea, 9, 48012 Bilbao (Errekalde)",
+      "addressLocality": "Bilbao",
+      "addressRegion": "Bizkaia",
+      "postalCode": "48012",
+      "addressCountry": "España"
+    }
+  </script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <div class="phone">📞 +34 641 78 87 22</div>
+      <a href="https://wa.me/641788722" class="whatsapp-btn">WhatsApp</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Bienvenidos a <strong>Reparación de calzado Benito</strong></h1>
+    <p>Reparación profesional de calzado, cambio de suelas, tacones, sandalias y botas de trekking</p>
+  </section>
+
+  <section class="services">
+<div class="grid">
+      <!-- Servicios se generan desde config.js -->
+      <div class="service-card">
+        <h3>cambio de suelas y tacones</h3>
+        <p>Cambio y reparación de suelas y tacones de calzado</p>
+      </div>
+      <div class="service-card">
+        <h3>arreglo de sandalias y botas de trekking</h3>
+        <p>Reparación y arreglo de sandalias y botas de trekking</p>
+      </div>
+      <div class="service-card">
+        <h3>costuras en otros objetos</h3>
+        <p>Costuras y reparaciones en otros objetos</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="opinions">
+    <h2>Opiniones de nuestros clientes</h2>
+    <div class="opinion">"Excelente atención y profesionales"</div>
+    <div class="opinion">"Reparaciones rápidas y de calidad"</div>
+    <div class="opinion">"Muy recomendado para arreglo de calzado"</div>
+  </section>
+
+<section>
+    <iframe class="map"
+        src="https://www.google.com/maps?q=Reparaci%C3%B3n+de+calzado+Benito,+Autonom%C3%ADa+Kalea+9,+48012+Bilbao&hl=es&z=17&output=embed"
+        title="Mapa: Reparación de calzado Benito, Autonomía Kalea 9, Bilbao"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+  <section class="schedule">
+    <h2>Horario de atención</h2>
+    <p>Lunes a Jueves: 9:00 a 13:30 y de 16:30 a 19:30</p>
+    <p>Sábados: Cerrado</p>
+    <p>Domingos: Cerrado</p>
+  </section>
+
+  <section class="form">
+    <h2>Contacta con nosotros</h2>
+    <form action="mailto:info@reparacioncalzado.com" method="POST">
+      <input type="text" class="input" placeholder="Tu nombre" required>
+      <input type="email" class="input" placeholder="Tu email" required>
+      <textarea class="input" rows="3" placeholder="Tu mensaje"></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Reparación de calzado Benito. <a href="politica-privacidad.html">Política de privacidad</a>. <a href="aviso-legal.html">Aviso legal</a>.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script>
+    // Cargar configuración desde config.js
+    // Los elementos del DOM se actualizan con los datos de config
+    document.addEventListener('DOMContentLoaded', function() {
+      const cfg = window.config || {};
+      
+      // Actualizar cabecera
+      const phoneEl = document.querySelector('.phone');
+      if (cfg.negocio && cfg.negocio.telefono) {
+        phoneEl.textContent = '📞 ' + cfg.negocio.telefono;
+      }
+      
+      // Actualizar botón WhatsApp
+      const waBtn = document.querySelector('.whatsapp-btn');
+      if (cfg.negocio && cfg.negocio.whatsapp) {
+        waBtn.href = 'https://wa.me/' + cfg.negocio.whatsapp;
+      }
+      
+      // Actualizar título hero
+      const h1 = document.querySelector('.hero h1');
+      if (cfg.negocio && cfg.negocio.nombre) {
+        h1.innerHTML = 'Bienvenidos a <strong>' + cfg.negocio.nombre + '</strong>';
+      }
+      
+      // Actualizar subtítulo hero
+      const p = document.querySelector('.hero p');
+      if (cfg.negocio && cfg.negocio.subtitulo) {
+        p.textContent = cfg.negocio.subtitulo;
+      }
+      
+      // Actualizar horario
+      const schedule = document.querySelector('.schedule');
+      if (cfg.horario) {
+        let horarios = '';
+        if (cfg.horario.lunes) horarios += '<p>' + 'Lunes a Viernes: ' + cfg.horario.lunes + '</p>';
+        if (cfg.horario.sabado) horarios += '<p>' + 'Sábados: ' + cfg.horario.sabado + '</p>';
+        if (cfg.horario.domingo || cfg.horario.domingo === 'Cerrado') horarios += '<p>' + 'Domingos: ' + cfg.horario.domingo + '</p>';
+        if (schedule) schedule.innerHTML = horarios;
+      }
+      
+      // Actualizar formulario
+      const form = document.querySelector('.form h2');
+      if (cfg.formulario && cfg.formulario.titulo) {
+        form.textContent = cfg.formulario.titulo;
+      }
+      const inputs = document.querySelectorAll('.input');
+      if (cfg.formulario) {
+        if (cfg.formulario.nombre) inputs[0].placeholder = cfg.formulario.nombre;
+        if (cfg.formulario.email) inputs[1].placeholder = cfg.formulario.email;
+        if (cfg.formulario.mensaje) inputs[2].placeholder = cfg.formulario.mensaje;
+      }
+      const btn = document.querySelector('.form button');
+      if (cfg.formulario && cfg.formulario.boton) {
+        btn.textContent = cfg.formulario.boton;
+      }
+    });
+  </script>
+  
+</body>
+</html>
